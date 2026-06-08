@@ -3,3 +3,13 @@ dist
 .env
 .env.local
 .vercel
+
+# Local editor and OS files
+.DS_Store
+*.log
+
+# OpenCode local runtime files, keep .opencode/skills tracked
+.opencode/cache/
+.opencode/logs/
+.opencode/sessions/
+.opencode/tmp/
