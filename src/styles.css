@@ -320,6 +320,7 @@ p {
 .panel-card,
 .floating-card,
 .intro-card,
+.mvv-card,
 .product-card,
 .audience-grid article,
 .contact-card {
@@ -430,6 +431,41 @@ p {
   color: #ffffff;
 }
 
+.mvv-section {
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.mvv-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: var(--radius-md);
+}
+
+.mvv-card p {
+  margin-bottom: 0;
+}
+
+.values-card ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.values-card li {
+  padding: 0.75rem 0.9rem;
+  border-radius: 999px;
+  color: var(--forest-900);
+  background: var(--mint-100);
+  font-weight: 800;
+}
+
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -499,7 +535,7 @@ p {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem;
 }
 
@@ -542,6 +578,43 @@ p {
 .product-stat {
   margin-bottom: 1rem;
   font-size: 0.82rem;
+}
+
+.product-details {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-details li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: var(--slate-700);
+  font-weight: 700;
+}
+
+.product-details li::before {
+  position: absolute;
+  left: 0;
+  top: 0.58rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  content: '';
+  border-radius: 50%;
+  background: var(--mint-500);
+}
+
+.service-copy {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  padding: 1rem;
+  border-radius: 16px;
+  color: var(--forest-900);
+  background: rgba(209, 250, 229, 0.6);
+  font-weight: 800;
 }
 
 .image-credit {
@@ -647,6 +720,31 @@ p {
   gap: 0.8rem;
 }
 
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-top: 0.4rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--forest-900);
+  background: rgba(255, 255, 255, 0.74);
+  font-weight: 800;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.social-links a:hover {
+  border-color: var(--mint-500);
+  background: var(--mint-100);
+}
+
 .site-footer {
   justify-content: space-between;
   gap: 1rem;
@@ -706,6 +804,7 @@ p {
 
   .product-grid,
   .gallery-grid,
+  .mvv-grid,
   .audience-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -772,6 +871,7 @@ p {
 
   .product-grid,
   .gallery-grid,
+  .mvv-grid,
   .audience-grid {
     grid-template-columns: 1fr;
   }

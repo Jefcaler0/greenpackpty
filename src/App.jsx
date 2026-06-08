@@ -2,8 +2,10 @@ const products = [
   {
     name: 'Envases de caña de azúcar',
     description:
-      'Soportan temperaturas extremas, son aptos para comida caliente y microondas, y son 100% compostables.',
+      'Solución principal para restaurantes y dark kitchens que necesitan empaques resistentes para comida caliente, delivery y takeout.',
     stat: '100% compostables',
+    service: 'Servicio asociado: venta por mayor, asesoría de formatos y personalización con tintas de soya.',
+    details: ['Aptos para comida caliente', 'Compatibles con microondas', 'Alta resistencia a humedad y grasa'],
     image:
       'https://upload.wikimedia.org/wikipedia/commons/1/18/Empty_takeaway_cheeseburger_box_Romford_outdoor_market_at_Market_Place_Romford_London_01.jpg',
     alt: 'Caja de comida para llevar similar a un envase compostable de caña de azúcar',
@@ -12,20 +14,13 @@ const products = [
   {
     name: 'Vasos de PLA',
     description:
-      'Vasos fríos transparentes biodegradables con aspecto de plástico y degradación natural.',
+      'Opción transparente para cafeterías, juguerías y restaurantes que venden bebidas frías con una presentación limpia y sostenible.',
     stat: 'Para bebidas frías',
+    service: 'Servicio asociado: abastecimiento recurrente, precios por volumen y recomendación de tapas compatibles.',
+    details: ['Aspecto similar al plástico', 'Material biodegradable', 'Ideales para bebidas frías y smoothies'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/PLA_Cups_12oz.jpg',
     alt: 'Vasos transparentes compostables de PLA',
     credit: 'Bioleaderpack, Wikimedia Commons, CC BY 4.0',
-  },
-  {
-    name: 'Bolsas de papel kraft',
-    description:
-      'Bolsas con asas de alta resistencia y soportes planos, optimizadas para delivery y takeout.',
-    stat: 'Listas para delivery',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Stack_of_brown_paper_bags_beneath_a_counter.jpg',
-    alt: 'Pila de bolsas de papel kraft marrón para empaque',
-    credit: 'Tessa Bury, Wikimedia Commons, CC BY 4.0',
   },
 ];
 
@@ -57,6 +52,8 @@ const values = [
   'Asistencia B2B express para reabastecimiento en 24 horas.',
 ];
 
+const brandValues = ['Sostenibilidad aplicada', 'Calidad verificable', 'Servicio cercano', 'Innovación responsable'];
+
 function LeafIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="icon">
@@ -85,9 +82,11 @@ function App() {
           <span>GreenPack Panamá</span>
         </a>
         <nav className="main-nav" aria-label="Navegación principal">
+          <a href="#quienes-somos">Nosotros</a>
           <a href="#galeria">Galería</a>
           <a href="#productos">Productos</a>
           <a href="#valor">Valor B2B</a>
+          <a href="#mision">Misión</a>
           <a href="#ubicacion">Ubicación</a>
           <a className="nav-cta" href="#contacto">Cotizar</a>
         </nav>
@@ -141,18 +140,49 @@ function App() {
             <h2 id="quienes-somos">Distribuidora aliada para una transición sostenible rentable.</h2>
           </div>
           <div className="intro-card">
-            <h3>Propósito corporativo</h3>
+            <h3>Quiénes somos</h3>
             <p>
-              Empoderamos a negocios gastronómicos locales para migrar a empaques eco-amigables de alto estándar,
-              cuidando costos, experiencia de entrega y consistencia de abastecimiento.
+              GreenPack Panamá es una marca B2B enfocada en empaques biodegradables para restaurantes, cafeterías,
+              dark kitchens y empresas de catering que buscan operar con menor impacto ambiental.
             </p>
           </div>
           <div className="intro-card highlighted">
-            <h3>Misión y visión 2029</h3>
+            <h3>Qué hacemos</h3>
             <p>
-              Abastecer el canal B2B de Panamá con empaques circulares y biodegradables, consolidándonos como
-              referente tecnológico y logístico en Ciudad de Panamá y provincias centrales.
+              Distribuimos envases compostables, vasos biodegradables y soluciones de personalización para negocios
+              gastronómicos que necesitan abastecimiento constante, asesoría y entrega local.
             </p>
+          </div>
+        </section>
+
+        <section className="section-shell mvv-section" id="mision" aria-labelledby="mision-title">
+          <div className="section-heading compact">
+            <p className="eyebrow">Misión, visión y valores</p>
+            <h2 id="mision-title">Una operación comercial con enfoque sostenible.</h2>
+          </div>
+          <div className="mvv-grid">
+            <article className="mvv-card">
+              <h3>Misión</h3>
+              <p>
+                Abastecer al canal B2B de Panamá con empaques circulares y biodegradables que preserven la frescura
+                alimentaria y reduzcan la dependencia del plástico convencional.
+              </p>
+            </article>
+            <article className="mvv-card">
+              <h3>Visión</h3>
+              <p>
+                Consolidarnos para 2029 como referente tecnológico y logístico de empaques eco-amigables certificados
+                en Ciudad de Panamá y provincias centrales.
+              </p>
+            </article>
+            <article className="mvv-card values-card">
+              <h3>Valores</h3>
+              <ul>
+                {brandValues.map((value) => (
+                  <li key={value}>{value}</li>
+                ))}
+              </ul>
+            </article>
           </div>
         </section>
 
@@ -182,8 +212,14 @@ function App() {
 
         <section className="section-shell" id="productos" aria-labelledby="productos-title">
           <div className="section-heading">
-            <p className="eyebrow">Catálogo estrella</p>
-            <h2 id="productos-title">Productos diseñados para restaurantes, cafeterías y delivery.</h2>
+            <div>
+              <p className="eyebrow">Productos y servicios</p>
+              <h2 id="productos-title">Dos productos clave para la campaña digital.</h2>
+            </div>
+            <p>
+              La oferta se concentra en productos fáciles de explicar, cotizar y comprar por volumen para captar
+              negocios gastronómicos con intención comercial clara.
+            </p>
           </div>
           <div className="product-grid">
             {products.map((product) => (
@@ -194,6 +230,12 @@ function App() {
                 <div className="product-stat">{product.stat}</div>
                 <h3>{product.name}</h3>
                 <p>{product.description}</p>
+                <ul className="product-details">
+                  {product.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+                <p className="service-copy">{product.service}</p>
               </article>
             ))}
           </div>
@@ -204,8 +246,8 @@ function App() {
 
         <section className="section-shell value-section" id="valor" aria-labelledby="valor-title">
           <div className="value-copy">
-            <p className="eyebrow">Valor añadido local</p>
-            <h2 id="valor-title">La ventaja GreenPack está en la inmediatez y la resistencia certificada.</h2>
+            <p className="eyebrow">Por qué nos escogen</p>
+            <h2 id="valor-title">Oferta de valor basada en inmediatez, resistencia y personalización.</h2>
             <p>
               Resolvemos los dolores habituales del comprador gastronómico: desabastecimiento, empaques que se rompen
               con humedad, poca personalización y fletes internacionales elevados.
@@ -282,6 +324,11 @@ function App() {
             <a className="button secondary full" href="mailto:ventas@greenpackpanama.com">
               ventas@greenpackpanama.com
             </a>
+            <div className="social-links" aria-label="Redes sociales">
+              <a href="https://www.instagram.com/greenpackpty" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://www.facebook.com/greenpackpty" target="_blank" rel="noreferrer">Facebook</a>
+              <a href="https://www.linkedin.com/company/greenpackpty" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
           </div>
         </section>
       </main>
