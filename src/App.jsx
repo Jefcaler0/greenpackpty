@@ -49,8 +49,13 @@ const brandValues = ['Sostenibilidad aplicada', 'Calidad verificable', 'Servicio
 function LeafIcon() {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" className="icon brand-leaf">
-      <path d="M25.9 5.9C16.8 6.4 9.6 11.5 7.8 19c-.5 2.2.2 4.3 1.9 5.7 1.8 1.5 4.1 1.7 6.3.8 7.1-3.1 11-10.8 11.6-17.9.1-1-.7-1.8-1.7-1.7Z" />
-      <path d="M11.3 22.1c3.2-5.8 7.6-9.8 13.1-12.4" />
+      <path d="M25.8 6.2C18 6.6 10.4 10.6 7.5 17.6c-1.4 3.4-.7 6.7 1.8 8.6 2.5 1.9 5.9 1.7 9.1-.4 6.1-4 8.6-11.8 8.9-18.1 0-.9-.7-1.6-1.5-1.5Z" />
+      <path d="M10.6 23.4C14.7 17 19.3 12.5 25 8.8" />
+      <path d="M15.1 17.2 12 16.5" />
+      <path d="M17.6 14.5 17 11.7" />
+      <path d="M19.4 12.9 22.6 12.4" />
+      <path d="M13.1 20.6 10.4 20" />
+      <path d="M21.5 10.8 21.1 8.7" />
     </svg>
   );
 }

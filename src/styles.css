@@ -180,9 +180,12 @@ p {
   fill: currentColor;
 }
 
-.brand-leaf path:last-child {
+.brand-leaf path:not(:first-child) {
+  fill: none;
   stroke: var(--forest-900);
-  stroke-width: 2.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
 }
 
 .main-nav {
